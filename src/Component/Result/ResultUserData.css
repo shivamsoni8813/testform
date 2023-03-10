@@ -1,0 +1,12 @@
+.table{
+    justify-content: space-between;
+}
+.rowDivision{
+    display: flex;
+    flex-direction: column;
+}
+.colDivision{
+    
+    display: flex;
+    flex-direction: column;
+}
