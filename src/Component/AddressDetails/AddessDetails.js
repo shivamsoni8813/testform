@@ -33,7 +33,7 @@ const AddessDetails = ({userData}) => {
                         <input type="text" className="form-control" value={addressDetail.city} onChange={(e)=>setAddressDetail({...addressDetail, city: e.target.value})} id="inputAddress" placeholder="City" required/>
                     </div>
                     <div className="col-md-6">
-                        <select id="inputState" className="form-select" placeholder='Enter State' required
+                        <select id="state" className="form-select" placeholder='Enter State' required
                          value={addressDetail.state} onChange={(e)=>setAddressDetail({...addressDetail, state: e.target.value})}>
                             <option>Rajasthan</option>
                            
