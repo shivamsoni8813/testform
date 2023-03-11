@@ -18,11 +18,13 @@ const AddessDetails = ({userData}) => {
         setStepPercent(100)
         setShowResult(true)
     }
+   
     return (
         <div>
             <div className="AddressDetailsPage">
                 {
                 !showResult &&
+                <>
                 <form className="row g-3 " onSubmit={(e)=>handleCilck(e)}>
 
                     <div className="col-mb-6">
@@ -37,8 +39,8 @@ const AddessDetails = ({userData}) => {
                     <div className="col-md-6">
                         <select id="state" className="form-select" placeholder='Enter State' required
                          value={addressDetail.state} onChange={(e)=>setAddressDetail({...addressDetail, state: e.target.value})}>
+                            <option >Choose..</option>
                             <option>Rajasthan</option>
-                           
                             <option>Gujrat</option>
                         </select>
                     </div>
@@ -53,8 +55,11 @@ const AddessDetails = ({userData}) => {
                         <button type="submit" className="btn btn-primary" >Next</button>
                     </div>
                 </form>
+                </>
+
         }
         {showResult && <ResultUserData userData={userData} address = {addressDetail} />}
+        
             </div>
 
         </div>

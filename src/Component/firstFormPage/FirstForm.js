@@ -61,6 +61,7 @@ const FirstForm = () => {
                             <div className="col-md-6">
                                 <select id="bloodGroup" className="form-select" placeholder='Enter Blood Group' autoComplete='on' required
                                     value={userData.bloodGroup} onChange={(e) => setUserData({ ...userData, bloodGroup: e.target.value })}>
+                                    <option>choose</option>
                                     <option>A+</option>
                                     <option>B+</option>
                                     <option>AB+</option>

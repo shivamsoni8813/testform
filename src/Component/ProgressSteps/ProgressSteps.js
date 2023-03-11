@@ -18,9 +18,10 @@ export function StepProgressBar(params) {
             <img
               style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
               width="30"
-              src="https://i.pinimg.com/originals/ec/2c/c4/ec2cc45a21e60b927beee270822aa1b8.png"
-              
-            />
+              src="https://www.freeiconspng.com/thumbs/number-1-png/number-1-png-image-20.png"
+              className="firstImg"
+              />
+            
             
           )}
         </Step>
@@ -29,7 +30,8 @@ export function StepProgressBar(params) {
             <img
               style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
               width="30"
-              src="https://www.clipartmax.com/png/middle/80-804604_number-2-in-circle.png"
+              src="https://m.media-amazon.com/images/I/41b8MNprCaL.jpg"
+              className="secoundImg"
             />
           )}
         </Step>
@@ -40,6 +42,7 @@ export function StepProgressBar(params) {
               style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
               width="30"
               src="https://www.kindpng.com/picc/m/11-112569_number-3-in-circle-hd-png-download.png"
+              className="thirdImg"
               />
               )}
         </Step>

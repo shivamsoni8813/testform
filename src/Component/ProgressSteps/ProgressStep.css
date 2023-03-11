@@ -7,3 +7,12 @@
     display: flex;
     flex-direction: column;
 }
+.firstImg{
+    border-radius: 20px;
+}
+.secoundImg{
+    border-radius: 20px;
+}
+.thirdImg{
+    border-radius: 30px;
+}
