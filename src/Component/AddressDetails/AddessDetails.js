@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ResultUserData from '../Result/ResultUserData'
+import { StepPercent } from '../context/StepContext'
 import './AddressDetails.css'
-
 const AddessDetails = ({userData}) => {
+    let {setStepPercent}=useContext(StepPercent)
     let [showResult, setShowResult] = useState(false)
     let [addressDetail, setAddressDetail] = useState({
         address1 : "",
@@ -14,6 +15,7 @@ const AddessDetails = ({userData}) => {
     })
     let handleCilck = (e)=>{
         e.preventDefault()
+        setStepPercent(100)
         setShowResult(true)
     }
     return (
@@ -24,10 +26,10 @@ const AddessDetails = ({userData}) => {
                 <form className="row g-3 " onSubmit={(e)=>handleCilck(e)}>
 
                     <div className="col-mb-6">
-                        <input type="text" className="form-control" value={addressDetail.address1} onChange={(e)=>setAddressDetail({...addressDetail, address1: e.target.value})} id="inputAddress" placeholder="Address Line 1" required/>
+                        <input type="text" className="form-control" value={addressDetail.address1} onChange={(e)=>setAddressDetail({...addressDetail, address1: e.target.value})} id="inputAddress" placeholder="Address 1" required/>
                     </div>
                     <div className="col-mb-6">
-                        <input type="text" className="form-control" value={addressDetail.address2} onChange={(e)=>setAddressDetail({...addressDetail, address2: e.target.value})} id="inputAddress" placeholder="Address Line 2" required/>
+                        <input type="text" className="form-control" value={addressDetail.address2} onChange={(e)=>setAddressDetail({...addressDetail, address2: e.target.value})} id="inputAddress" placeholder="Address 2" required/>
                     </div>
                     <div className="col-mb-6">
                         <input type="text" className="form-control" value={addressDetail.city} onChange={(e)=>setAddressDetail({...addressDetail, city: e.target.value})} id="inputAddress" placeholder="City" required/>

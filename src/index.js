@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
+import StepContext, { StepPercent } from './Component/context/StepContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <StepContext>
     <App />
+    </StepContext>
     </BrowserRouter>
   </React.StrictMode>
 );

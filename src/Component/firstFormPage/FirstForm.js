@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AddessDetails from '../AddressDetails/AddessDetails'
+import { StepPercent } from '../context/StepContext'
 import './FirstForm.css'
 const FirstForm = () => {
-
+    let {stepPercent, setStepPercent} = useContext(StepPercent)
+    
     let [userData, setUserData] = useState({
         name: "",
         lastName: "",
@@ -24,6 +26,7 @@ const FirstForm = () => {
     let goToAddress = (e) => {        
         e.preventDefault()
         setShowAddress(true)
+        setStepPercent(50)
     }
 
     return (
